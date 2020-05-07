@@ -13,3 +13,79 @@
  *= require_tree .
  *= require_self
  */
+
+/*全体*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.clearfix::after {
+	content: "";
+	display: inline-block;
+	clear: both;
+}
+h2, h4, h5, p, table {
+	font-family: ('ヒラギノ角ゴ Std W8', 'arial black')
+}
+a:link {
+	color: black;
+}
+a:visited {
+	color: gray;
+}
+a:hover {
+	color: white;
+	background-color: black;
+}
+a:active {
+	color: white;
+	background-color: black;
+}
+
+.top-contents {
+	width: 100%;
+	padding: 0 40px;
+	margin-top: 30px;
+}
+
+/*update_message*/
+.message {
+	color: green;
+}
+
+/*一覧（index）*/
+body {
+	width: 100%;
+	padding: 30px 0 0 30px;
+}
+.index-up, .index-down {
+	padding: 10px;
+}
+.index-up, .show span {
+	font-weight: lighter;
+	font-size: small;
+}
+tbody td {
+	padding: 3px;
+}
+
+/*詳細 (show)*/
+.show-contents {
+	width: 100%;
+	padding: 10px 40px;
+}
+.show-title, .show-body {
+	padding: 20px 0;
+}
+/*編集(edit)*/
+ .edit-title, .edit-body {
+ 	padding: 5px 0;
+ }
+
+
+
+
+
+
+

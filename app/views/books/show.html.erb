@@ -1,12 +1,20 @@
-<% if flash[:notice] %>
-	<p><%= flash[:notice] %></p>
-<% end %>
-
-<h2>詳細ページ</h2>
-
-<h3>Title:<%= @book.title %></h3>
-
-<h3>Body:<%= @book.body %></h3>
+<div class="message">
+	<% if flash[:notice] %>
+		<p><%= flash[:notice] %></p>
+	<% end %>
+</div>
 
 
-<span><%=link_to "Edit", edit_book_path(@book) %>|<%=link_to "back", books_path %></span>
+<!-- <h2>詳細ページ</h2>
+ -->
+
+<body class="show">
+	<div class="show-contents">
+		<h5 class="show-title">Title: <span><%= @book.title %></span></h5>
+
+		<h5 class="show-body">Body: <span><%= @book.body %></span></h5>
+	</div>
+
+	<h5><%=link_to "Edit", edit_book_path(@book) %> | <%=link_to "back", books_path %></h5>
+</body>
+
