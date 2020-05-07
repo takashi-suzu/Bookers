@@ -1,3 +1,7 @@
+<% if flash[:notice] %>
+	<p><%= flash[:notice] %></p>
+<% end %>
+
 <h2>Books</h2>
 <table class="table">
 	<thead>
@@ -16,11 +20,24 @@
 				<%= book.body %>
 			</td>
 			<td>
-			<%= link_to "詳細", book_path(book) %>
-			<%= link_to "編集", edit_book_path(book) %>
-			<%= link_to "削除", book_path(book), method: :delete, data: {confirm: "削除しますか？"} %>
+			<%= link_to "show", book_path(book) %>
+			<%= link_to "edit", edit_book_path(book) %>
+			<%= link_to "destroy", book_path(book), method: :delete, data: {confirm: "Are you sure?"} %>
 			</td>
 		</tr>
 	<% end %>
 	</tbody>
 </table>
+
+
+<h3>New book</h3>
+<%= form_for (@book) do |f| %>
+
+<p>title</p>
+<%= f.text_area :title %>
+
+<p>book</p>
+<%= f.text_area :body %>
+
+<%= f.submit "create" %>
+<% end %>
