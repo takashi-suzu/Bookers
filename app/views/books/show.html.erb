@@ -1,7 +1,8 @@
+<h2>詳細ページ</h2>
 
 <h3>Title:<%= @book.title %></h3>
 
 <h3>Body:<%= @book.body %></h3>
 
 
-<span><%=link_to "Edit", book_path %>|<%=link_to "back", book_path %></span>
+<span><%=link_to "Edit", edit_book_path(@book) %>|<%=link_to "back", books_path %></span>
