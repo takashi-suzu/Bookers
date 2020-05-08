@@ -49,9 +49,12 @@ a:active {
 	margin-top: 30px;
 }
 
-/*update_message*/
+/*message*/
 .message {
 	color: green;
+}
+.error-message h2, .error-message span {
+	color: red;
 }
 
 /*一覧（index）*/
